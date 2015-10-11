@@ -1,0 +1,6 @@
+09:54:29 **** Incremental Build of configuration Debug for project Copy of lab1_source_sink_fifo ****
+make all 
+make: Nothing to be done for `all'.
+
+09:54:29 Build Finished (took 102ms)
+

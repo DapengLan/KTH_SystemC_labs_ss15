@@ -1,0 +1,15 @@
+/*
+ * arbitor.cpp
+ *
+ *  Created on: Sep 20, 2015
+ *      Author: parallels
+ */
+
+#include "arbitor.h"
+
+void arbitor::prc_arbi() {
+	while (1) {
+		wait(50);
+		selector = not selector;
+	}
+}

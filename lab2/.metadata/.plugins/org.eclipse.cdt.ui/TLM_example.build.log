@@ -1,0 +1,20 @@
+15:17:30 **** Incremental Build of configuration Debug for project TLM_example ****
+make all 
+Building file: ../src/TLM_example.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TLM_example.d" -MT"src/TLM_example.d" -o "src/TLM_example.o" "../src/TLM_example.cpp"
+../src/TLM_example.cpp: In constructor ‘Child2::Child2(sc_core::sc_module_name)’:
+../src/TLM_example.cpp:39:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SC_CTOR (Child2):chan("channel") {  //?
+                                 ^
+Finished building: ../src/TLM_example.cpp
+ 
+Building target: TLM_example
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "TLM_example"  ./src/TLM_example.o   -lsystemc
+/usr/local/systemc-2.3.0/lib-linux64/libsystemc.so: undefined reference to `sc_main'
+collect2: error: ld returned 1 exit status
+make: *** [TLM_example] Error 1
+
+15:17:31 Build Finished (took 1s.236ms)
+

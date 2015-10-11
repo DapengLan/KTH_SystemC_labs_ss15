@@ -1,0 +1,45 @@
+/*
+ * testbench1.h
+ *
+ *  Created on: Oct 8, 2015
+ *      Author: parallels
+ */
+
+#include "memory.h"
+#include "systemc.h"
+
+SC_MODULE(testbench1) {
+
+	//memory mem1;
+/*	void mem_vs_t1() {
+		ifstream ifs ("T1.txt", ifstream::in);
+					address = 0;
+					unsigned int a;
+					unsigned int b;
+		            while (!ifs.eof()) {
+		           	ifs >> dec >>a>> hex>>b;
+		           	cout <<dec<< a << "  "<< hex<<b<< endl;
+		            	if (data == b) {cout<<"no error"<< endl; }
+		           		else {cout<<"data:"<<data<<"vs B:" << b << "  error"<< endl;}
+		            }
+		            ifs.close();
+	}*/
+
+	void stimulate () {
+		for (int i= 0; i < MEMSIZE; i ++) {
+			address= i;
+			ce = 1;
+			we = 0;
+		}
+	}
+
+	SC_CTOR(testbench1) {
+/*		mem1.memread();
+		mem1.ce(ce);
+		mem1.we(we);
+		mem1.data(data);
+		mem1.address(address);*/
+		SC_THREAD(stimulate);
+
+	}
+};

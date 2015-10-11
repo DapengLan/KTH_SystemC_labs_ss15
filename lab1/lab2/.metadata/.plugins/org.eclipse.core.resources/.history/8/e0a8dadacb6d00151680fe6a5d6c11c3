@@ -1,0 +1,30 @@
+/*
+ * tb_mem.h
+ *
+ *  Created on: Oct 8, 2015
+ *      Author: parallels
+ */
+
+#pragma once
+#include <iostream>
+#include "systemc.h"
+#include <string.h>
+#include <fstream>
+
+SC_MODULE(tb_mem) {
+	sc_inout <unsigned int> data,address,addr_last;
+	sc_out <bool> we,ce;
+	sc_event check_done,check_event;
+	string inname;
+	string outname;
+
+	SC_CTOR(tb_mem) {
+		SC_THREAD(test);
+		SC_THREAD(check_mem);
+	}
+
+	void test();
+	void check_mem;
+
+};
+

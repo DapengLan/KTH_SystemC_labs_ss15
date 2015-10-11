@@ -1,0 +1,15 @@
+/*
+ * monitor.cpp
+ *
+ *  Created on: Sep 9, 2015
+ *      Author: parallels
+ */
+
+#include "monitor.h"
+
+void Monitor::pro_monitor(){
+	cout<<"AT"<< Monitor::m_clk<<"input is:";
+	cout<<m_a<<"+"<<m_b<<"output is:";
+	cout<<m_c<<endl;
+}
+

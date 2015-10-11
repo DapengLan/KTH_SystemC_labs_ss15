@@ -1,0 +1,46 @@
+#include<iostream>
+
+#include<fstream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+            ifstream stream1("T1.txt");
+
+            char a[80];
+
+            if(!stream1)
+
+            {
+
+                        cout << "While opening a file an error is encountered" << endl;
+
+            }
+
+            else
+
+            {
+
+                        cout << "File is successfully opened" << endl;
+
+            }
+
+            while(!stream1.eof())
+
+            {
+
+                        stream1 >> a;
+
+                        cout << a << endl;
+
+            }
+
+            return(0);
+
+}
+

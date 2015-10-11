@@ -1,0 +1,20 @@
+11:49:12 **** Incremental Build of configuration Debug for project or_gate ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/testbench.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testbench.d" -MT"src/testbench.d" -o "src/testbench.o" "../src/testbench.cpp"
+Finished building: ../src/testbench.cpp
+ 
+Building target: or_gate
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "or_gate"  ./src/main.o ./src/monitor.o ./src/or_gate.o ./src/testbench.o   -lsystemc
+Finished building target: or_gate
+ 
+11:49:16 **** Incremental Build of configuration Debug for project or_gate ****
+make all 
+make: Nothing to be done for `all'.

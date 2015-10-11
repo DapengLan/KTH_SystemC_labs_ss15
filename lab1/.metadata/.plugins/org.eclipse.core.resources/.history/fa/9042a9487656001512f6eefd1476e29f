@@ -1,0 +1,27 @@
+/*
+ * stimulus.cpp
+ *
+ *  Created on: Sep 9, 2015
+ *      Author: parallels
+ */
+
+#ifndef STIMULUS_CPP_
+#define STIMULUS_CPP_
+
+#include "stimulus.h"
+
+void Stimulus::generate() {
+	wait();
+	a= 100; b =200;
+	wait();
+	a = -100; b= -200;
+	wait();
+	a = 100; b= -100;
+	wait();
+	sc_stop;
+};
+
+
+
+
+#endif /* STIMULUS_CPP_ */

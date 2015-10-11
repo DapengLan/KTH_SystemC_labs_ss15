@@ -1,0 +1,7 @@
+18:21:09 **** Clean-only build of configuration Debug for project lecture2_module_process ****
+make clean 
+rm -rf  ./src/add3in.o ./src/counter.o ./src/spawnmodule.o  ./src/add3in.d ./src/counter.d ./src/spawnmodule.d  lecture2_module_process
+ 
+
+18:21:09 Build Finished (took 67ms)
+

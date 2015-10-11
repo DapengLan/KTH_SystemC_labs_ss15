@@ -1,0 +1,15 @@
+11:37:07 **** Incremental Build of configuration Debug for project lab1_4.3_arbitor_bus ****
+make all 
+Building file: ../src/arbitor.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arbitor.d" -MT"src/arbitor.d" -o "src/arbitor.o" "../src/arbitor.cpp"
+Finished building: ../src/arbitor.cpp
+ 
+Building target: lab1_4.3_arbitor_bus
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab1_4.3_arbitor_bus"  ./src/UART.o ./src/arbitor.o ./src/change_case.o ./src/filter.o ./src/m_bus.o ./src/testbench.o ./src/top.o   -lsystemc
+Finished building target: lab1_4.3_arbitor_bus
+ 
+
+11:37:08 Build Finished (took 1s.82ms)
+

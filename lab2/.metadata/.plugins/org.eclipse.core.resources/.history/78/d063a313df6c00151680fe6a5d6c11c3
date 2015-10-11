@@ -1,0 +1,43 @@
+//============================================================================
+// Name        : la2_memory2.cpp
+// Author      : dp
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>     // std::cout
+#include <fstream>      // std::ifstream
+#define MEMSIZE 1040
+
+int main () {
+using namespace std;
+ifstream ifs ("T1.txt", ifstream::in);
+ofstream myfile;
+myfile.open ("T4",ofstream::out);
+
+unsigned int mem[2*MEMSIZE];
+unsigned int a;
+unsigned int b;
+
+  while (!ifs.eof()) {
+	  int i = 0;
+	ifs >> dec >>a>>hex>>b;
+	cout <<dec<< a << "  "<<b<< endl;
+	mem[i] = a;
+	mem[i+1] =b;
+	i += 2;
+  }
+
+  while (!ifs.eof()) {
+	  int j = 0;
+	myfile << dec <<mem[j] <<"  "<< hex <<mem[j+1]<< endl;
+	j += 2;
+  }
+
+	cout <<"success"<< endl;
+
+  ifs.close();
+  myfile.close();
+    return 0;
+}

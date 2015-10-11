@@ -1,0 +1,1323 @@
+19:04:04 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+../src/tb_noise.cpp: In member function ‘void tb_noise::check_mem()’:
+../src/tb_noise.cpp:95:41: error: ‘file_addr’ was not declared in this scope
+    if (correct_data != "0b0" + HexToBin(file_addr[i]))
+                                         ^
+make: *** [src/tb_noise.o] Error 1
+19:04:38 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+../src/tb_noise.cpp: In member function ‘void tb_noise::check_mem()’:
+../src/tb_noise.cpp:108:24: error: ‘file_addr’ was not declared in this scope
+     data.write(strtoul(file_addr[i].substr(0, 2).c_str(), NULL, 16));
+                        ^
+make: *** [src/tb_noise.o] Error 1
+19:05:23 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+../src/tb_noise.cpp: In member function ‘void tb_noise::check_mem()’:
+../src/tb_noise.cpp:52:6: warning: variable ‘err_correction_flag’ set but not used [-Wunused-but-set-variable]
+  int err_correction_flag = 0;
+      ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:10:23 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:13:39 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:14:26 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:15:02 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:16:58 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:17:41 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:18:42 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:43:46 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:11:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+../src/main.cpp: In function ‘int sc_main(int, char**)’:
+../src/main.cpp:17:5: error: no match for ‘operator<<’ (operand types are ‘std::istream {aka std::basic_istream<char>}’ and ‘const char [32]’)
+  cin<< "please enter the number 1 or 2 " << testnum;
+     ^
+../src/main.cpp:17:5: note: candidates are:
+In file included from /usr/include/c++/4.9/string:52:0,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.9/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.9/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.9/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.9/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/ostream:609:0,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.9/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.9/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:602:5: note: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/4.9/ostream:602:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/memory:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:51,
+                 from ../src/main.cpp:10:
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/systemc:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_fifo<T>&)
+ operator << ( ::std::ostream& os, const sc_fifo<T>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_inout<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_inout<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_in<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_in<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_buffer.h:32:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:77,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note: template<class T, sc_core::sc_writer_policy POL> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_signal<T, POL>&)
+ operator << ( ::std::ostream& os, const sc_signal<T,POL>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:36:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_time&)
+ operator << ( ::std::ostream& os, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_process.h:37:0,
+                 from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:33,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_reset_target&)
+ inline std::ostream& operator << ( std::ostream& os, 
+                      ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+../src/main.cpp:20:3: error: ‘test1’ was not declared in this scope
+   test1.ce(ce);
+   ^
+../src/main.cpp:20:12: error: ‘ce’ was not declared in this scope
+   test1.ce(ce);
+            ^
+../src/main.cpp:21:12: error: ‘we’ was not declared in this scope
+   test1.we(we);
+            ^
+../src/main.cpp:22:14: error: ‘data’ was not declared in this scope
+   test1.data(data);
+              ^
+../src/main.cpp:23:19: error: ‘addr_last’ was not declared in this scope
+   test1.addr_last(addr_last);
+                   ^
+../src/main.cpp:24:17: error: ‘address’ was not declared in this scope
+   test1.address(address);
+                 ^
+../src/main.cpp:62:10: error: ‘ceA’ was not declared in this scope
+  memA.ce(ceA);
+          ^
+../src/main.cpp:63:10: error: ‘weA’ was not declared in this scope
+  memA.we(weA);
+          ^
+../src/main.cpp:64:12: error: ‘dataA’ was not declared in this scope
+  memA.data(dataA);
+            ^
+../src/main.cpp:65:17: error: ‘addr_lastA’ was not declared in this scope
+  memA.addr_last(addr_lastA);
+                 ^
+../src/main.cpp:66:15: error: ‘addressA’ was not declared in this scope
+  memA.address(addressA);
+               ^
+../src/main.cpp:74:10: error: ‘ceB’ was not declared in this scope
+  memB.ce(ceB);
+          ^
+../src/main.cpp:75:10: error: ‘weB’ was not declared in this scope
+  memB.we(weB);
+          ^
+../src/main.cpp:76:12: error: ‘dataB’ was not declared in this scope
+  memB.data(dataB);
+            ^
+../src/main.cpp:77:17: error: ‘addr_lastB’ was not declared in this scope
+  memB.addr_last(addr_lastB);
+                 ^
+../src/main.cpp:78:15: error: ‘addressB’ was not declared in this scope
+  memB.address(addressB);
+               ^
+make: *** [src/main.o] Error 1
+19:44:19 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:11:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+../src/main.cpp: In function ‘int sc_main(int, char**)’:
+../src/main.cpp:17:5: error: no match for ‘operator<<’ (operand types are ‘std::istream {aka std::basic_istream<char>}’ and ‘const char [32]’)
+  cin<< "please enter the number 1 or 2 " << testnum;
+     ^
+../src/main.cpp:17:5: note: candidates are:
+In file included from /usr/include/c++/4.9/string:52:0,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.9/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.9/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.9/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.9/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/ostream:609:0,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.9/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.9/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:602:5: note: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/4.9/ostream:602:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/memory:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:51,
+                 from ../src/main.cpp:10:
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/systemc:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_fifo<T>&)
+ operator << ( ::std::ostream& os, const sc_fifo<T>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_inout<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_inout<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_in<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_in<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_buffer.h:32:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:77,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note: template<class T, sc_core::sc_writer_policy POL> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_signal<T, POL>&)
+ operator << ( ::std::ostream& os, const sc_signal<T,POL>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:36:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_time&)
+ operator << ( ::std::ostream& os, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_process.h:37:0,
+                 from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:33,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_reset_target&)
+ inline std::ostream& operator << ( std::ostream& os, 
+                      ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+../src/main.cpp:20:3: error: ‘test1’ was not declared in this scope
+   test1.ce(ce);
+   ^
+../src/main.cpp:20:12: error: ‘ce’ was not declared in this scope
+   test1.ce(ce);
+            ^
+../src/main.cpp:21:12: error: ‘we’ was not declared in this scope
+   test1.we(we);
+            ^
+../src/main.cpp:22:14: error: ‘data’ was not declared in this scope
+   test1.data(data);
+              ^
+../src/main.cpp:23:19: error: ‘addr_last’ was not declared in this scope
+   test1.addr_last(addr_last);
+                   ^
+../src/main.cpp:24:17: error: ‘address’ was not declared in this scope
+   test1.address(address);
+                 ^
+../src/main.cpp:62:10: error: ‘ceA’ was not declared in this scope
+  memA.ce(ceA);
+          ^
+../src/main.cpp:63:10: error: ‘weA’ was not declared in this scope
+  memA.we(weA);
+          ^
+../src/main.cpp:64:12: error: ‘dataA’ was not declared in this scope
+  memA.data(dataA);
+            ^
+../src/main.cpp:65:17: error: ‘addr_lastA’ was not declared in this scope
+  memA.addr_last(addr_lastA);
+                 ^
+../src/main.cpp:66:15: error: ‘addressA’ was not declared in this scope
+  memA.address(addressA);
+               ^
+../src/main.cpp:74:10: error: ‘ceB’ was not declared in this scope
+  memB.ce(ceB);
+          ^
+../src/main.cpp:75:10: error: ‘weB’ was not declared in this scope
+  memB.we(weB);
+          ^
+../src/main.cpp:76:12: error: ‘dataB’ was not declared in this scope
+  memB.data(dataB);
+            ^
+../src/main.cpp:77:17: error: ‘addr_lastB’ was not declared in this scope
+  memB.addr_last(addr_lastB);
+                 ^
+../src/main.cpp:78:15: error: ‘addressB’ was not declared in this scope
+  memB.address(addressB);
+               ^
+make: *** [src/main.o] Error 1
+19:45:26 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:11:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+../src/main.cpp: In function ‘int sc_main(int, char**)’:
+../src/main.cpp:17:5: error: no match for ‘operator<<’ (operand types are ‘std::istream {aka std::basic_istream<char>}’ and ‘const char [32]’)
+  cin<< "please enter the number 1 or 2 " << testnum;
+     ^
+../src/main.cpp:17:5: note: candidates are:
+In file included from /usr/include/c++/4.9/string:52:0,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.9/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.9/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.9/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.9/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/ostream:609:0,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.9/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.9/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:602:5: note: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/4.9/ostream:602:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/memory:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:51,
+                 from ../src/main.cpp:10:
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/systemc:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_fifo<T>&)
+ operator << ( ::std::ostream& os, const sc_fifo<T>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_inout<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_inout<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_in<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_in<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_buffer.h:32:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:77,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note: template<class T, sc_core::sc_writer_policy POL> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_signal<T, POL>&)
+ operator << ( ::std::ostream& os, const sc_signal<T,POL>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:17:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:36:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_time&)
+ operator << ( ::std::ostream& os, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_process.h:37:0,
+                 from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:33,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_reset_target&)
+ inline std::ostream& operator << ( std::ostream& os, 
+                      ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+../src/main.cpp:25:3: error: ‘test1’ was not declared in this scope
+   test1.ce(ce);
+   ^
+make: *** [src/main.o] Error 1
+19:45:53 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:11:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+../src/main.cpp: In function ‘int sc_main(int, char**)’:
+../src/main.cpp:18:5: error: no match for ‘operator<<’ (operand types are ‘std::istream {aka std::basic_istream<char>}’ and ‘const char [32]’)
+  cin<< "please enter the number 1 or 2 " << testnum;
+     ^
+../src/main.cpp:18:5: note: candidates are:
+In file included from /usr/include/c++/4.9/string:52:0,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.9/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.9/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.9/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.9/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.9/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.9/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/ostream:609:0,
+                 from /usr/include/c++/4.9/iostream:39,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.9/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.9/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.9/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/iostream:39:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.9/ostream:602:5: note: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/4.9/ostream:602:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/include/c++/4.9/memory:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:51,
+                 from ../src/main.cpp:10:
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/4.9/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   ‘std::istream {aka std::basic_istream<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/systemc:82:0,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_fifo<T>&)
+ operator << ( ::std::ostream& os, const sc_fifo<T>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_fifo.h:425:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_inout<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_inout<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:1110:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_clock_ports.h:31:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:79,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_in<T>&)
+ ::std::ostream& operator << ( ::std::ostream& os, const sc_in<T>& a )
+                 ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal_ports.h:285:17: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/communication/sc_buffer.h:32:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:77,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note: template<class T, sc_core::sc_writer_policy POL> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_signal<T, POL>&)
+ operator << ( ::std::ostream& os, const sc_signal<T,POL>& a )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/communication/sc_signal.h:817:1: note:   template argument deduction/substitution failed:
+../src/main.cpp:18:8: note:   cannot convert ‘std::cin’ (type ‘std::istream {aka std::basic_istream<char>}’) to type ‘std::ostream& {aka std::basic_ostream<char>&}’
+  cin<< "please enter the number 1 or 2 " << testnum;
+        ^
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:36:0,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_time&)
+ operator << ( ::std::ostream& os, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_time.h:324:1: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+In file included from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_process.h:37:0,
+                 from /usr/local/systemc-2.3.0/include/sysc/kernel/sc_module.h:33,
+                 from /usr/local/systemc-2.3.0/include/systemc:72,
+                 from /usr/local/systemc-2.3.0/include/systemc.h:244,
+                 from ../src/main.cpp:10:
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_reset_target&)
+ inline std::ostream& operator << ( std::ostream& os, 
+                      ^
+/usr/local/systemc-2.3.0/include/sysc/kernel/sc_reset.h:57:22: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream<char>}’ to ‘std::ostream& {aka std::basic_ostream<char>&}’
+../src/main.cpp:26:3: error: ‘test1’ was not declared in this scope
+   test1.ce(ce);
+   ^
+make: *** [src/main.o] Error 1
+19:47:13 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:11:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+Finished building: ../src/main.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+19:52:24 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 

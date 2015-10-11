@@ -1,0 +1,37 @@
+19:52:24 **** Incremental Build of configuration Debug for project  lab2_memory_component ****
+make all 
+Building file: ../src/tb_noise.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/tb_noise.d" -MT"src/tb_noise.d" -o "src/tb_noise.o" "../src/tb_noise.cpp"
+In file included from ../src/tb_noise.cpp:12:0:
+../src/memory.h: In constructor ‘memory::memory(sc_core::sc_module_name, int, std::string, int)’:
+../src/memory.h:28:9: warning: ‘memory::in_name’ will be initialized after [-Wreorder]
+  string in_name;
+         ^
+../src/memory.h:25:6: warning:   ‘int memory::mem_num’ [-Wreorder]
+  int mem_num;
+      ^
+../src/memory.h:39:2: warning:   when initialized here [-Wreorder]
+  memory(sc_module_name name, int size, string in_name ,int mem_num) :
+  ^
+In file included from ../src/check_parity.h:9:0,
+                 from ../src/tb_noise.cpp:15:
+../src/HextoBin.h: In function ‘std::string HexToBin(std::string)’:
+../src/HextoBin.h:17:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < sHex.length(); ++i)
+                    ^
+In file included from ../src/tb_noise.cpp:15:0:
+../src/check_parity.h: In function ‘int check_odd_parity(std::string)’:
+../src/check_parity.h:29:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 4; i < data.length(); i++) { //why is 2    //data.length() == 11  0b0 01100011
+                    ^
+Finished building: ../src/tb_noise.cpp
+ 
+Building target: lab2_memory_component
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory_component"  ./src/main.o ./src/memory.o ./src/tb_mem.o ./src/tb_noise.o   -lsystemc
+Finished building target: lab2_memory_component
+ 
+
+19:52:26 Build Finished (took 2s.287ms)
+

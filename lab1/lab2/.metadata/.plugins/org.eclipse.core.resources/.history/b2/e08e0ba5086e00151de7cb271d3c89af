@@ -1,0 +1,38 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 8, 2015
+ *      Author: parallels
+ */
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <fstream>
+#include "systemc.h"
+#include "memory.h"
+//#include "tb_mem.h"
+
+int sc_main (int argc, char* argv[]) {
+	sc_signal<unsigned int> data;
+	sc_signal<unsigned int> addr_last;
+	sc_signal<unsigned int> address;
+	sc_signal<bool> we,ce;
+
+	memory mem1("mem1", 1040,"T1.txt");
+	tb_mem test1("test1");
+	mem1.ce(ce);
+	mem1.we(we);
+	mem1.data(data);
+	mem1.addr_last(addr_last);
+	mem1.address(address);
+
+	test1.ce(ce);
+	test1.we(we);
+	test1.data(data);
+	test1.addr_last(addr_last);
+	test1.address(address);
+
+	sc_start();
+	return 0;
+}
+
+

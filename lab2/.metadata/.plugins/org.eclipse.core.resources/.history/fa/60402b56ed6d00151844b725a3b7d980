@@ -1,0 +1,45 @@
+/*
+ * memory.cpp
+ *
+ *  Created on: Oct 7, 2015
+ *      Author: parallels
+ */
+#ifndef MEMORY_CPP_
+#define MEMORY_CPP_
+#include <iostream>     // std::cout
+#include <fstream>      // std::ifstream
+#include "systemc.h"
+#include <stdio.h>
+#include "string.h"
+#include "errno.h"
+using namespace std;
+int MEMSIZE;
+unsigned int mem_temp[MEMSIZE];
+SC_MODULE(memory)
+{
+ /*   sc_inout <unsigned int >  data;  //
+    sc_in <unsigned int >     address;
+    sc_in <bool>            we;
+    sc_in <bool>           ce;
+    sc_inout<unsigned int>		addr_last;*/
+
+
+    string init_file;
+//	unsigned int mem_temp[MEMSIZE];
+
+
+    SC_HAS_PROCESS(memory);
+    memory(sc_module_name name, int size, string init_file) :sc_module(name),MEMSIZE(size),init_file(init_file)
+    {
+    //	SC_METHOD(entry);
+    //    sensitive << ce << we << address;
+    //	memread();
+    //	memwrite();
+    }
+    void entry();
+    void memread();
+    void memwrite();
+};
+
+
+#endif /* MEMORY_CPP_ */

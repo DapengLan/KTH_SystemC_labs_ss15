@@ -1,0 +1,50 @@
+/*
+ * tb_mem.h
+ *
+ *  Created on: Oct 8, 2015
+ *      Author: parallels
+ */
+
+#pragma once
+#include <iostream>
+#include "systemc.h"
+#include <string.h>
+#include <fstream>
+
+SC_MODULE(tb_noise) {
+	sc_inout<sc_lv<8> > data;
+//	sc_in <sc_lv<8> > data;
+	sc_inout<int> addr_last;
+	sc_out<int> address;
+	sc_out<bool> we;
+	sc_out<bool> ce;
+	sc_event check_done, check_event;
+
+	int mem_num = 0;
+	string in_name, out_name;
+
+	SC_HAS_PROCESS(tb_noise);
+
+
+	tb_noise(sc_module_name name) :sc_module(name) {
+		out_name = "/home/parallels/Documents/workspace/lab2/ lab2_memory_component/T3_error_or04.txt";
+		SC_THREAD(test);  // input the test mode
+		SC_THREAD(check_mem);
+	//	sensitive <<check_event;
+		//	SC_THREAD(copy_to_ram);
+	}
+
+	tb_noise(sc_module_name name, int mem_num) :sc_module(name),mem_num(mem_num) {
+		out_name = "/home/parallels/Documents/workspace/lab2/ lab2_memory_component/T3_error_2.txt";
+
+		SC_THREAD(test);  // input the test mode
+		SC_THREAD(check_mem);
+	//	sensitive <<check_event;
+		//	SC_THREAD(copy_to_ram);
+	}
+
+	void test();
+	void check_mem();
+	void copy_to_ram();  // initial for onetime?
+};
+

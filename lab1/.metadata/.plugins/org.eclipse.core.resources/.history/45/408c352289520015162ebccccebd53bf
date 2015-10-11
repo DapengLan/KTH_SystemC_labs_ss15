@@ -1,0 +1,15 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Sep 3, 2015
+ *      Author: parallels
+ */
+
+#include "systemc.h"
+
+int sc_main (int argc, char* argv[]) {
+	return 0;
+}
+
+
+

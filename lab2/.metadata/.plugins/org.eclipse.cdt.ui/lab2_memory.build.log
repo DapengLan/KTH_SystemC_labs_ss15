@@ -1,0 +1,10 @@
+12:40:52 **** Incremental Build of configuration Debug for project lab2_memory ****
+make all 
+Building target: lab2_memory
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab2_memory"  ./src/main.o ./src/memory.o   -lsystemc
+Finished building target: lab2_memory
+ 
+
+12:40:52 Build Finished (took 292ms)
+

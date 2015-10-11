@@ -1,0 +1,18 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Sep 3, 2015
+ *      Author: parallels
+ */
+
+#include "systemc.h"
+ // Hello_world is module name
+ SC_MODULE (hello_world) {
+   SC_CTOR (hello_world) {
+    // Nothing in constructor
+   }   void say_hello() {
+     //Print "Hello World" to the console.
+    cout << "Hello World.\n";
+  }
+ };
+

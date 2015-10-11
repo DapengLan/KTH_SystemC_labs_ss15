@@ -1,0 +1,105 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
+#include "systemc.h"
+#include <fstream>
+#include <bitset>
+#include "memory.h"
+using namespace std;
+
+void memory::entry() {
+	if (address.read() > addr_last.read()) {
+		SC_REPORT_ERROR("", "out of range memory size");
+	} else {
+		if (ce.read() == 1) {
+			//	cout << "ce:1@" << sc_time_stamp () << endl;
+			if (we.read() == 1) {
+				//	mem_temp[address.read()] = data.read();  //write into memory
+				string buf;
+				buf = data.read().to_string(SC_HEX, true);
+				//		cout << "Address: "<<address.read()-1 <<"Test:the buffer value is"<< buf <<endl;
+				// ------------ Data stored as Integers in RAM ------------
+				mem_temp[address.read()] = to_string(
+						strtoul(buf.substr(3, 5).c_str(), NULL, 16)); // Convert hex to Int
+				//	cout << "Address: "<<address.read() <<"Test:the buffer value is"<< buf <<endl;
+
+			} else {
+				//	cout << "Test:the adress is  "<< address.read() <<endl;
+				char *a = (char *) mem_temp[address.read()].c_str();
+				//	cout << "Test:the write value is  "<< atoi(a) <<endl;
+				data.write(atoi(a));
+				//	cout << "MEMWriteAdd is :" <<address.read()-1 <<"\t"<< "MEM write value is   " << data.read() << endl;
+				//  Should compare the last address.It is the last address trigger!
+				//data.write(atoi(a));
+				//	data.write(a);
+				//	data.write(mem_temp[address.read()]); //read from memory //to_int?
+			}
+		} else {
+			//	cout << "ce=0:@" << sc_time_stamp () << endl;
+			if (we.read() == 1) {
+				cout << "Write OP when CE = '0' " << endl;
+			}  //write nothing into memory
+			else {
+				data.write(0xFF);
+			}
+		}
+	}
+}
+
+void memory::memread() {
+	ifstream ifs(in_name, ifstream::in);
+//	ifstream ifs("/home/parallels/Documents/workspace/lab2/ lab2_memory_component/T1.txt");
+	int faddr = 0;
+	string fdata = "";
+
+	while (!ifs.eof()) {
+		ifs >> faddr >> fdata;
+		//	cout << " I am in the loop eof" <<endl;
+		if (faddr >= MEMSIZE)
+			break;
+		//
+		//	mem_temp[faddr] = fdata;
+		//	format  storage int
+		mem_temp[faddr] = to_string( strtoul(fdata.c_str(), NULL, 16) );
+		//	cout << dec << faddr << "\t"<< mem_temp[faddr] << endl;
+	}
+	addr_last.write(faddr - 1);
+	ifs.close();
+}
+
+void memory::memwrite() {
+	ofstream myfile(
+			"/home/parallels/Documents/workspace/lab2/ lab2_memory_component/T4",
+			ofstream::out);
+	for (int i = 0; i < MEMSIZE; i++) {
+		myfile << dec << i << "  " << hex << mem_temp[i] << endl;
+		//	cout << "success" << endl;
+	}
+	myfile.close();
+}
+
+void memory::listingA() {
+	wait(2,SC_NS);
+	cout << "Noise1 to memory"<<endl;
+	for(int i = 0; i < addr_last; i++) {
+		int data_temp =  atoi( mem_temp[i].c_str() );
+		data_temp = data_temp | 4;
+		mem_temp[i] = to_string(data_temp);
+		cout << "After listingA: " << mem_temp[i] << endl;
+	}
+
+}
+
+void memory::listingB() {
+	wait(50000,SC_NS);
+	cout << "Noise2 to memory"<<endl;
+	for(int i = 0; i < addr_last; i++) {
+		int data_temp =  atoi( mem_temp[i].c_str() );
+		if(data_temp == 112) //0x70
+			{data_temp = data_temp & 115;}
+		else if (data_temp == 103) // 0x63
+			{ data_temp = data_temp & 99; }
+		mem_temp[i] = to_string(data_temp);
+		cout << "After listingB: " << mem_temp[i] << endl;
+	}
+}

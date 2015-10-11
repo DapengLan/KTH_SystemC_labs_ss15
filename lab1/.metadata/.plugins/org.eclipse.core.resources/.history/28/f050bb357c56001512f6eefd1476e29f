@@ -1,0 +1,45 @@
+/*
+ * top.h
+ *
+ *  Created on: Sep 9, 2015
+ *      Author: parallels
+ */
+
+#ifndef TOP_H_
+#define TOP_H_
+//connect togother using the channel..
+#include "adder.h"
+#include "stimulus.h"
+#include "monitor.h"
+#include "systemc.h"
+
+SC_MODULE(Top){
+	sc_signal<int> siga, sigb, sigc;
+	sc_clock testclk;
+
+	Stimulus stim;
+	Adder dut;
+	Monitor mon;
+
+	SC_CTOR(Top):testclk("testclk"), stim("stim"), dut("dut"), mon("mon") {
+		stim.s_a (siga);
+		stim.s_b (sigb);
+		stim.clk (testclk);
+
+		dut.a (siga);
+		dut.b (sigb);
+		dut.c (sigc);
+		//dut(siga,sigb,sigc);
+
+		mon.m_a(siga);
+		mon.m_b(sigb);
+		mon.m_b(sigc);
+		mon.m_c(testclk);
+
+	}
+};
+
+
+
+
+#endif /* TOP_H_ */
