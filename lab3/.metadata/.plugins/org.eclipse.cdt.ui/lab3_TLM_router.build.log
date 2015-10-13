@@ -1,0 +1,6 @@
+16:30:26 **** Incremental Build of configuration Debug for project lab3_TLM_router ****
+make all 
+make: Nothing to be done for `all'.
+
+16:30:27 Build Finished (took 99ms)
+

@@ -38,7 +38,7 @@ public:
 
     switch( request.type ) {
     case READ :
-      response.status = read( request.a , response.d );
+      response.status = this->read( request.a , response.d );
       break; 
     case WRITE:
       //response.status = this->write( request.a , request.d );

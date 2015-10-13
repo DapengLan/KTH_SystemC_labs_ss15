@@ -8,3 +8,124 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-10-11 13:41:50.476
 !MESSAGE Indexed 'lab3_TLM_test1' (1 sources, 102 headers) in 8.82 sec: 8,373 declarations; 14,404 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.0088%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-11 18:00:34.051
+!MESSAGE Indexed 'lab3_TLM_test2' (1 sources, 102 headers) in 2.54 sec: 8,373 declarations; 14,404 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.0088%)
+
+!ENTRY org.eclipse.cdt.launch 4 104 2015-10-11 21:16:39.601
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 104 2015-10-11 21:16:39.640
+!MESSAGE /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.launch 4 104 2015-10-11 21:17:06.342
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 104 2015-10-11 21:17:06.342
+!MESSAGE /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.launch 4 104 2015-10-11 22:44:18.657
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 104 2015-10-11 22:44:18.657
+!MESSAGE /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+!STACK 0
+java.io.FileNotFoundException: /home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test1/Debug/lab3_TLM_test1 not found
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.verifyProgramPath(AbstractCLaunchDelegate2.java:676)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.checkBinaryDetails(LocalRunLaunchDelegate.java:129)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:74)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:63)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:73)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2015-10-12 16:25:54.650 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-12 20:11:10.762
+!MESSAGE Indexed 'lab3_TLM_test2_m_chan_s' (4 sources, 317 headers) in 30 sec: 36,717 declarations; 58,869 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-12 21:44:54.964
+!MESSAGE Indexed 'lab3_TLM_task2' (4 sources, 317 headers) in 16.2 sec: 36,719 declarations; 58,883 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 10:16:42.878
+!MESSAGE Indexed 'lab3_TLM_task3' (4 sources, 317 headers) in 13.5 sec: 36,726 declarations; 58,925 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 10:45:35.206
+!MESSAGE Indexed 'lab3_TLM_task4' (4 sources, 319 headers) in 11.5 sec: 36,731 declarations; 58,959 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 11:44:49.490
+!MESSAGE Indexed 'lab3_TLM_task5_node' (3 sources, 318 headers) in 10.3 sec: 36,703 declarations; 58,841 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 14:08:59.984
+!MESSAGE Indexed 'lab3_TLM_router' (4 sources, 325 headers) in 11.5 sec: 37,866 declarations; 61,383 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.003%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 15:52:12.357
+!MESSAGE Indexed 'lab3_TLM_arbiter' (4 sources, 325 headers) in 12.3 sec: 37,858 declarations; 61,328 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.003%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-13 17:54:12.344
+!MESSAGE Indexed 'lab3_TLM_task5_switch' (4 sources, 317 headers) in 12.5 sec: 36,726 declarations; 58,925 references; 0 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.0031%)

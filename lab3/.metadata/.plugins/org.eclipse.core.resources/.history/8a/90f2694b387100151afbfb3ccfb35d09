@@ -1,0 +1,21 @@
+#include "master.h"
+#include "mem_slave.h"
+#include "switch.h"
+//#include "tlm.h"
+//#include "tlm_utils.h"
+//#include "systemc.h"
+
+
+int sc_main( int argc , char **argv )
+{
+
+	master m("master");
+	mem_slave s("slave",4);  // size num K;
+
+  m.initiator_port( s.target_port );
+
+  sc_start(2000,SC_NS);
+
+  return 0;
+
+}

@@ -1,0 +1,6 @@
+10:43:18 **** Incremental Build of configuration Debug for project lab3_TLM_task2 ****
+make all 
+make: Nothing to be done for `all'.
+
+10:43:18 Build Finished (took 74ms)
+

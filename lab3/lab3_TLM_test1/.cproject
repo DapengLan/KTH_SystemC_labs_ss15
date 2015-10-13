@@ -25,10 +25,15 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.981448085" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.886349409" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/local/systemc-2.3.0/include"/>
+									<listOptionValue builtIn="false" value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm"/>
+									<listOptionValue builtIn="false" value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils"/>
+									<listOptionValue builtIn="false" value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol"/>
+									<listOptionValue builtIn="false" value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1471625315" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX11__"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.include.files.1577531470" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1280577100" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1650277622" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
@@ -38,10 +43,10 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.440286949" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.533187015" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
-								<option id="gnu.cpp.link.option.libs.199574056" superClass="gnu.cpp.link.option.libs" valueType="libs">
+								<option id="gnu.cpp.link.option.libs.199574056" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="systemc"/>
 								</option>
-								<option id="gnu.cpp.link.option.paths.2147063898" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+								<option id="gnu.cpp.link.option.paths.2147063898" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/usr/local/systemc-2.3.0/lib-linux64"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.620257090" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -129,5 +134,13 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/lab3_TLM_test1"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/lab3_TLM_test1"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

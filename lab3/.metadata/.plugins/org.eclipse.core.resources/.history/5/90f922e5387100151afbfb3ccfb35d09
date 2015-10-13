@@ -1,0 +1,39 @@
+#include "switch.h"
+
+
+using basic_protocol::basic_status;
+
+switch_2::switch_2( sc_module_name module_name , int k ) :
+  sc_module( module_name ) ,
+  target_port("iport")
+{
+
+  target_port( *this );  // this point to own obeject  this == mem_slave;
+}
+
+basic_status switch_2::write( const ADDRESS_TYPE &a , const DATA_TYPE &d )
+{
+	count_write++;
+  cout << name() << " writing at " << a << " value " << d << endl;
+
+  return basic_protocol::SUCCESS;
+}
+
+basic_status switch_2::read( const ADDRESS_TYPE &a , DATA_TYPE &d )
+{
+	count_read++;
+  return basic_protocol::SUCCESS;
+}
+
+switch_2::~switch_2() {
+//	delete memory;
+  cout << "The transactions of read is :" << count_read<<endl;
+  cout << "The transactions of write is :" << count_write<<endl;
+
+}
+
+//this measure doesn't work;
+/*void mem_slave::print_transaction() {
+	cout << "The transactions of read and write is :" << count<<endl;
+
+}*/

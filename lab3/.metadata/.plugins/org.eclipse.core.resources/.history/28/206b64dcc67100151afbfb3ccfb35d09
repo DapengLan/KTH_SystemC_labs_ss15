@@ -1,0 +1,58 @@
+#include "node.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+using basic_protocol::basic_status;
+
+node::node(sc_module_name module_name, int k, int i) : //constructor
+		sc_module(module_name), target_port("iport"), initiator_port("iport"), i(
+				i) {
+	target_port(*this);  // this point to own obeject  this == mem_slave;
+	memory = new ADDRESS_TYPE[k * 1024]; // here use the pointer,memory, so need the constructor;
+	SC_THREAD(run);
+}
+
+basic_status node::write(const ADDRESS_TYPE &a, const DATA_TYPE &d) {
+	count_receive++;
+	cout << name() << " Memory " << i << ":writing at " << a << " value " << d
+			<< endl;
+	memory[a] = d;
+	return basic_protocol::SUCCESS;
+}
+
+basic_status node::read(const ADDRESS_TYPE &a, DATA_TYPE &d) {
+	//count_read++;
+	d = memory[a];
+	cout << name() << " Memory " << i << ":reading at " << a << " value " << d
+			<< endl;
+	return basic_protocol::SUCCESS;
+}
+
+node::~node() {
+
+	delete[] memory;
+	cout << "The Node " << i << " read transaction is :" << count_receive
+			<< endl;
+	cout << "The Node " << i << " write transaction is :" << count_transmit
+			<< endl;
+
+}
+
+void node::run() {
+	DATA_TYPE d;
+	cout << "\n Reading the Node0.txt file.............." << endl;
+	ADDRESS_TYPE faddr;
+	DATA_TYPE fdata;
+	ifstream datafile;
+	datafile.open("/home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_task5_switch/node0.txt");
+	while (!datafile.eof()) {
+		datafile >> faddr >> fdata;
+		cout << "Node:"<<i<<" Writing Address: " << faddr << " value: " << fdata << endl;
+		initiator_port.write(faddr, fdata);
+
+		count_transmit ++;
+
+	}
+		}
+

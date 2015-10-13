@@ -7,7 +7,7 @@ PROTOCOL = ../basic_protocol
 USER = ../user
 
 GXX = g++
-TARGET_ARCH = linux
+TARGET_ARCH = linux64
 
 DEPEND = -MM
 

@@ -1,0 +1,12 @@
+18:11:04 **** Incremental Build of configuration Debug for project lab3_TLM_test2 ****
+make all 
+Building target: lab3_TLM_test2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab3_TLM_test2"  ./src/main.o ./src/mem_fifo_slave.o   -lsystemc
+./src/main.o: In function `toplevel::toplevel(sc_core::sc_module_name)':
+/home/parallels/workspace/Systemc_lab_KTH/lab3/lab3_TLM_test2/Debug/../src/main.cc:38: undefined reference to `user::master::master(sc_core::sc_module_name)'
+collect2: error: ld returned 1 exit status
+make: *** [lab3_TLM_test2] Error 1
+
+18:11:04 Build Finished (took 283ms)
+
