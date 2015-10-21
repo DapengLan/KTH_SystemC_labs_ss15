@@ -4,6 +4,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils"/>
 			<item value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/example_4_2"/>
 			<item value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/example_4_1"/>
 			<item value="/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils"/>
@@ -31,7 +32,7 @@
 		<item value="298" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.cdt.ui.wizards.NewSourceFileCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.cdt.ui.wizards.NewCWizard1" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.cdt.ui.newCWizards"/>

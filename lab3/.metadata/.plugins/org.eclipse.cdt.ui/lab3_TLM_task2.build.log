@@ -1,6 +1,58 @@
-10:43:18 **** Incremental Build of configuration Debug for project lab3_TLM_task2 ****
+16:33:52 **** Incremental Build of configuration Debug for project lab3_TLM_task2 ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.cc
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:2:0:
+../src/mem_slave.h:45:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_read=0;
+                  ^
+../src/mem_slave.h:46:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_write=0;
+                   ^
+In file included from ../src/main.cc:3:0:
+../src/switch.h:58:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_read=0;
+                  ^
+../src/switch.h:59:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_write=0;
+                   ^
+Finished building: ../src/main.cc
+ 
+Building file: ../src/master.cc
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cc"
+Finished building: ../src/master.cc
+ 
+Building file: ../src/mem_slave.cc
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/mem_slave.d" -MT"src/mem_slave.d" -o "src/mem_slave.o" "../src/mem_slave.cc"
+In file included from ../src/mem_slave.cc:20:0:
+../src/mem_slave.h:45:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_read=0;
+                  ^
+../src/mem_slave.h:46:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_write=0;
+                   ^
+Finished building: ../src/mem_slave.cc
+ 
+Building file: ../src/switch.cc
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/switch.d" -MT"src/switch.d" -o "src/switch.o" "../src/switch.cc"
+In file included from ../src/switch.cc:1:0:
+../src/switch.h:58:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_read=0;
+                  ^
+../src/switch.h:59:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int count_write=0;
+                   ^
+Finished building: ../src/switch.cc
+ 
+Building target: lab3_TLM_task2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab3_TLM_task2"  ./src/main.o ./src/master.o ./src/mem_slave.o ./src/switch.o   -lsystemc
+Finished building target: lab3_TLM_task2
+ 
 
-10:43:18 Build Finished (took 74ms)
+16:33:56 Build Finished (took 4s.552ms)
 

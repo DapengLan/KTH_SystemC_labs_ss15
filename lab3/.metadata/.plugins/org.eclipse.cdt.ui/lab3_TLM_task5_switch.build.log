@@ -1,32 +1,6 @@
-19:22:37 **** Incremental Build of configuration Debug for project lab3_TLM_task5_switch ****
+16:43:58 **** Incremental Build of configuration Debug for project lab3_TLM_task5_switch ****
 make all 
-Building file: ../src/node.cc
-Invoking: GCC C++ Compiler
-g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/tlm -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/utils -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/basic_protocol -I/home/parallels/workspace/Systemc_lab_KTH/lab3/TLM-2005-04-08/examples/user -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/node.d" -MT"src/node.d" -o "src/node.o" "../src/node.cc"
-In file included from ../src/node.cc:1:0:
-../src/node.h:41:24: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-   int count_transmit = 0;
-                        ^
-../src/node.h:42:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-   int count_receive=0;
-                     ^
-../src/node.h: In constructor ‘node::node(sc_core::sc_module_name, int, int, std::string)’:
-../src/node.h:34:24: warning: ‘node::target_port’ will be initialized after [-Wreorder]
-   sc_export< if_type > target_port;
-                        ^
-../src/node.h:33:48: warning:   ‘basic_protocol::basic_initiator_port<unsigned int, unsigned int> node::initiator_port’ [-Wreorder]
-   basic_initiator_port<ADDRESS_TYPE,DATA_TYPE> initiator_port;
-                                                ^
-../src/node.cc:8:1: warning:   when initialized here [-Wreorder]
- node::node(sc_module_name module_name, int k, int i ,string in_file) : //constructor
- ^
-Finished building: ../src/node.cc
- 
-Building target: lab3_TLM_task5_switch
-Invoking: GCC C++ Linker
-g++ -L/usr/local/systemc-2.3.0/lib-linux64 -o "lab3_TLM_task5_switch"  ./src/main.o ./src/master.o ./src/mem_slave.o ./src/node.o ./src/swich.o ./src/switch.o   -lsystemc
-Finished building target: lab3_TLM_task5_switch
- 
+make: Nothing to be done for `all'.
 
-19:22:39 Build Finished (took 1s.749ms)
+16:43:58 Build Finished (took 111ms)
 

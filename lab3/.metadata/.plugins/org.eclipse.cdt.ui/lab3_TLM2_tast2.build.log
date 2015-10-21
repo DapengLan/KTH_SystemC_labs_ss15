@@ -1,0 +1,17 @@
+16:25:09 **** Incremental Build of configuration Debug for project lab3_TLM2_tast2 ****
+make all 
+Building file: ../src/tlm2_socket.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX11__ -I/usr/local/systemc-2.3.0/include -I/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils -I/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tlm2_socket.d" -MT"src/tlm2_socket.d" -o "src/tlm2_socket.o" "../src/tlm2_socket.cpp"
+In file included from ../src/tlm2_socket.cpp:44:0:
+/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils/simple_target_socket.h: In instantiation of ‘tlm_utils::simple_target_socket<MODULE, BUSWIDTH, TYPES>::simple_target_socket(const char*) [with MODULE = Memory; unsigned int BUSWIDTH = 32u; TYPES = tlm::tlm_base_protocol_types]’:
+../src/tlm2_socket.cpp:197:40:   required from here
+/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils/simple_target_socket.h:65:21: error: ‘bind’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+    bind(m_fw_process);
+                     ^
+/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils/simple_target_socket.h:65:21: note: declarations in dependent base ‘tlm::tlm_base_target_socket<32u, tlm::tlm_fw_transport_if<>, tlm::tlm_bw_transport_if<>, 1, (sc_core::sc_port_policy)0u>’ are not found by unqualified lookup
+/home/parallels/Documents/systemC/TLM-2009-07-15/include/tlm/tlm_utils/simple_target_socket.h:65:21: note: use ‘this->bind’ instead
+make: *** [src/tlm2_socket.o] Error 1
+
+16:25:11 Build Finished (took 1s.317ms)
+

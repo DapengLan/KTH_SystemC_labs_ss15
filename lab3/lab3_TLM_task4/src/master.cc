@@ -20,6 +20,7 @@ void master::run() {
 	DATA_TYPE d;
 	if (i == 1) {
 		for (ADDRESS_TYPE a = 0; a < 20; a++) {
+			wait(10,SC_NS);
 			initiator_port.write(a, 1);
 			cout << "MEM[" << i << "]Writing Address " << a << " value :" << 1
 					<< endl;
@@ -27,8 +28,8 @@ void master::run() {
 	}
 
 	if (i == 2) {
-		wait(10,SC_NS);
 		for (ADDRESS_TYPE a = 0; a < 20; a++) {
+			wait(10,SC_NS);
 			initiator_port.write(a, 2);
 			cout << "MEM[" << i << "]Writing Address " << a << " value :" << 2
 					<< endl;
@@ -36,8 +37,8 @@ void master::run() {
 	}
 
 	if (i == 3) {
-		wait(10,SC_NS);
 		for (ADDRESS_TYPE a = 0; a < 20; a++) {
+			wait(10,SC_NS);
 			initiator_port.read(a, d);
 			cout << "MEM[" << i << "]Reading Address " << a << " value :" << d
 					<< endl;

@@ -1,0 +1,15 @@
+16:46:33 **** Incremental Build of configuration Debug for project lab3_TLM2_tast1 ****
+make all 
+Building file: ../src/tlm2_socket.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/systemc/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tlm2_socket.d" -MT"src/tlm2_socket.d" -o "src/tlm2_socket.o" "../src/tlm2_socket.cpp"
+Finished building: ../src/tlm2_socket.cpp
+ 
+Building target: lab3_TLM2_tast1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/systemc/lib-linux64 -o "lab3_TLM2_tast1"  ./src/tlm2_socket.o   -lsystemc
+Finished building target: lab3_TLM2_tast1
+ 
+
+16:46:35 Build Finished (took 1s.954ms)
+
