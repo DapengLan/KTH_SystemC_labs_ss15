@@ -32,9 +32,7 @@ public:
 			return true;
 		}
 		else{
-			cout << "nb_write_error" <<endl;
-			cout << "the value of n is" << n <<endl;
-		//	reset();
+			cout <<"  at" << sc_time_stamp()<< "nb_write_error" <<endl;
 		return false;
 		}
 	}
@@ -43,16 +41,16 @@ public:
 		if(n>0){
 			n--;
 			c = data[r++];
-		//		if(r == size) r=0;
 			return true;
 		}
 		else {
-			cout << "nb_read_error" <<endl;
-		//	reset();
+			cout <<"  at" << sc_time_stamp()<< " :nb_read_error" <<endl;
+
 		return false;
 		}
 	}
 
+	//~data(){};
 private:
 	sc_int<64>* data;
 	sc_int<64> size;
@@ -62,35 +60,18 @@ private:
 
 class sender:public sc_module {
 public:
-	//sc_port<nb_write_if> out;
-//	sc_in<bool> clock;
-
 	sc_out<sc_int<64> > out;
-/*	void write_fifo () {
-		int i = 0;
-		sc_int<64> A[8] = {1,2,3,4,5,6,7,8};
-		while (true) {
-			wait(); // wait for clock edge
-			if (out[i]-> nb_write(A[i]))
-				cout << "Write FIFO " << A[i] <<"at" << sc_time_stamp() <<endl ;
-			i++;
-		}
-	}*/
 	void write() {
 		int i = 0;
 		sc_int<64> A[8] = {1,2,3,4,5,6,7,8};
-		while (true) {
-
-		 // wait for clock edge
-			wait(10,SC_NS);
+		while (i<8) {
 			out = A[i];
-		//	cout<< "the value of cout is:" << out << endl;
-			i = (i + 1) % 8;
+			i++;
+			wait(10,SC_NS);
 		}
 	}
 	SC_CTOR(sender){
 		SC_THREAD(write);
-	//	sensitive << clock.pos();
 	}
 };
 
@@ -105,7 +86,7 @@ public:
 			while (true) {
 				wait();
 					if(fifo1.nb_write(receiver_in))
-					cout << setw(20) << "Write FIFO: " <<receiver_in<<"  at" << sc_time_stamp() <<endl ;
+					cout << setw(40) << "Write FIFO: " <<receiver_in<<"  at" << sc_time_stamp() <<endl ;
 			}
 		}
 
@@ -114,13 +95,11 @@ public:
 	while (true) {
 
 		if( fifo1.nb_read(y_temp))
-			{ cout << "y_temp is :" << y_temp <<endl;
+			{ cout << "y_temp is :" << y_temp <<"  at" << sc_time_stamp() <<endl;
 			y = y_temp * 2;
-		cout << setw(30) <<"Rprocess data: " <<y<<"  at" << sc_time_stamp() <<endl ;
+			cout << setw(70) <<"Rprocess data: " <<y<<"  at" << sc_time_stamp() <<endl ;
 			}
 		wait(10,SC_NS);
-	//	else
-	//		cout << "error at the Rprocess: "<< endl;
 	}
 	}
 
@@ -128,24 +107,19 @@ public:
 		SC_THREAD(write_fifo);
 			sensitive << receiver_in;
 		SC_THREAD(Rprocess);
-
 	}
-
 };
 
 
 class top: public sc_module {
 public:
-	//sc_clock clk1;
 	sender send1;
 	receiver rece1;
 	sc_signal<sc_int<64> > i;
 	SC_CTOR(top):send1("send1"),rece1("rece1"), i("internal"){
-	//	send1.clock(clk1);
 		send1.out(i);
 		rece1.receiver_in(i);
 	}
-
 };
 
 int sc_main(int argc, char *argv[]) {
